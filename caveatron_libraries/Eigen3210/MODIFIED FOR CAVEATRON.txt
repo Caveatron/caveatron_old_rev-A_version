@@ -1,0 +1,16 @@
+Eigen Library Modifications for Caveatron
+
+For Caveatron Firmware 0.9e and newer
+Joe Mitchell
+
+Extracted all contents of /Eigen folder into new library folder Eigen3210
+Deleted file "Array"
+Added Eigen3210.h header file with contents from rpavlik found in online forum post
+
+Also requires edit to Arduino base install file cstdio found in this location:
+	PC: C:\Users\{user}\AppData\Local\Arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3\
+	Mac: {user}\Library\Arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\arm-none-eabi\include\c++\4.8.3\
+	Comment out this line to read as follows: //#undef printf
+ 
+
+

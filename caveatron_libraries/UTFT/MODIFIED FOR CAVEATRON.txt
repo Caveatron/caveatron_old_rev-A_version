@@ -1,0 +1,23 @@
+UTFT Library Modifications for Caveatron
+
+For Caveatron Firmware 1.3 and newer
+2019-02-07
+Joe Mitchell
+
+In /hardware/arm/HW_ARM_defines.h:
+	Uncommented this line: #define CTE_DUE_SHIELD 1
+In /tft_drivers/r61581/initlcd.h:
+	Added option to initialize R61581 with inverted colors if new invert_colors variable is set to true
+In memorysaver.h:
+	Uncommented defines to disable unused display drivers except: 
+	CLPD (CTE50CPLD / CTE70CPLD / EHOUSE50CPLD), (ILI9486 (CTE40), R61581 (CTE35IPS), and SSD1963_800 (ITDB50 / TFT01_50 / CTE50 / EHOUSE50)
+In UTFT.cpp:
+	Added compilation define for Teensy 3.5/3.6
+	Added UTFT constructor variant that does not include display model
+	Added new function setDisplayModel that allows display to be declared separately from constructor in Setup function
+In UTFT.h:
+	Added declarations for UTFT constructor variant and new setDisplayModel function
+	Added declaration for invert_colors variable
+
+Library retains all original functionality.
+

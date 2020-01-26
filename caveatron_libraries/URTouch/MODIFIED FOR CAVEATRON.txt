@@ -1,0 +1,14 @@
+URTouch Library Modifications for Caveatron
+
+For Caveatron Firmware 1.3 and newer
+2019-02-07
+Joe Mitchell
+
+In URTouch.cpp:
+	Added InitTouch function variant that allows the three screen calibration parameters to be directly passed instead of loading them from URTouchCD.h
+	Added 1 microsecond delays after each call and read from the screen when using a Teensy 3.5/3.6 to slow the processing and avoid touch reading problems.
+In URTouch.h:
+	Added declaration for InitTouch function variant
+
+Library retains all original functionality.
+

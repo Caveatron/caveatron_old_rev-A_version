@@ -1,0 +1,16 @@
+MAX17043 Library Modifications for Caveatron
+
+For Caveatron Firmware 0.9g, 0.95a and newer
+Joe Mitchell
+
+In MAX17043.cpp:
+	Added setI2CPort function to set custom I2C port via _wire variable (Wire, Wire1, etc.)
+	Changed all "Wire." to "_wire->"
+	Defined MAXbatt external instance
+In MAX17043.h:
+	Added declaration for setI2CPort
+	Added declaration for _wire variable and initialize to default Wire
+	Added declaration for MAXbatt external instance
+
+Library retains all original functionality.
+

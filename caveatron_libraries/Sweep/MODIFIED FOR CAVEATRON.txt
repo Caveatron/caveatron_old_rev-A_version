@@ -1,0 +1,10 @@
+Sweep Library Modifications for Caveatron
+
+For Caveatron Firmware 0.9g, 0.95a and newer
+Joe Mitchell
+
+In Sweep.cpp:
+	Modified getReadings function to add capability to compute checksum and compare to received checksum for each packet. If checksum fails, the function returns false, and in the ScanPacket, bIsSync set to true with the other values set to 0.
+
+Library retains all original functionality.
+

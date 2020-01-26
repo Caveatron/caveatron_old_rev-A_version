@@ -1,0 +1,24 @@
+UTFT_CTE Library Modifications for Caveatron
+
+For Caveatron Firmware 1.3 and newer
+2019-02-07
+Joe Mitchell
+
+In UTFT_CTE.cpp:
+	Removed support for all displays except CTE 3.5" IPS and CTE 4.0" to save memory. Others are unused or no longer available.
+	Added commands in Load_image function to support either portrait or landscape orientation	
+	Added commands in Put_Text_array function to support either portrait or landscape orientation
+	Removed five global variable declarations and placed them in UTFT_CTE.h for consistency
+	Added new Get_Text_size_x function to return pixel length in x-direction of a text string of a given font
+	Added new Get_Text_size_y function to return pixel length in y-direction of a font
+	Added new Get_Text_array_size function to compute and return the total pixel length of a character array of a given font. Supports the Get_Text_size_x function.
+	Added hardware define to support Teensy 3.5/3.6 hardware
+In UTFT_CTE.h:
+	Changed BVS defines to CBVS defines to avoid conflict with UTFT_GHL library
+	Added public declarations for Get_Text_size_x, Get_Text_size_y, and Get_Text_array_size functions
+	Added five global variable declarations that were moved from UTFT_CTE.cpp and made them private
+	Added hardware define to support Teensy 3.5/3.6 hardware
+In /hardware:
+	Added /teensy subfolder with HW_TEENSY.h and HW_TEENSY_defines.h to support Teensy hardware
+
+
